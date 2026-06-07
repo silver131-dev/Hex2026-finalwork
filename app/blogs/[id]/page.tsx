@@ -7,6 +7,14 @@ import Link from "next/link";
 import BlogLayout from "@/components/BlogLayout"; // 🚨 引入剛做好的 Layout
 import { blogPosts } from "../../../data/posts";
 
+export async function generateStaticParams() {
+  return [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' }
+  ];
+}
+
 type Props = {
   params: Promise<{ id: string }>;
 };
