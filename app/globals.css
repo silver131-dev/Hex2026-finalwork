@@ -1,0 +1,122 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Tailwind v4 核心 */
+@import "tailwindcss";
+
+/* Typography Plugin for prose*/
+@plugin "@tailwindcss/typography"; 
+
+/* =========================================
+   Tailwind v4 Theme Tokens
+========================================= */
+@theme {
+  --color-primary-50: #fdf7f1;
+  --color-primary-100: #fde6cf;
+  --color-primary-500: #f5b87b;
+  --color-primary-900: #24140b;
+
+  --color-neutral-0: #ffffff;
+  --color-neutral-500: #737373;
+  --color-neutral-700: #404040;
+  --color-neutral-900: #1e1e1e;
+}
+
+/* =========================================
+   Global Body Style
+========================================= */
+body {
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-neutral-900);
+  background-color: var(--color-primary-50);
+}
+
+/* =========================================
+   Typography Tokens (Figma → CSS)
+========================================= */
+.text-heading-md { font-size: 28px; font-weight: 700; }
+.text-heading-sm { font-size: 24px; font-weight: 700; }
+.text-heading-xs { font-size: 20px; font-weight: 700; }
+.text-heading-xxs { font-size: 18px; font-weight: 700; }
+.text-heading-xxxs { font-size: 16px; font-weight: 700; }
+.text-heading-xxxxs { font-size: 14px; font-weight: 700; }
+
+.text-label-md { font-size: 16px; font-weight: 500; }
+.text-label-sm { font-size: 14px; font-weight: 500; }
+.text-label-xs { font-size: 13px; font-weight: 500; }
+
+.text-paragraph-md { font-size: 16px; font-weight: 500; }
+.text-paragraph-sm { font-size: 14px; font-weight: 500; }
+.text-paragraph-xs { font-size: 13px; font-weight: 500; }
+
+/* Google Icon 設定 */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 20px;
+}
+
+/* Animations 動畫 */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 15s linear infinite;
+}
+
+.prose-blog {
+  @apply prose max-w-none prose-p:text-[16px] prose-p:leading-relaxed prose-h2:text-[32px] prose-h3:text-[24px]
+    prose-img:mx-auto prose-img:my-12 prose-img:rounded-lg
+    prose-blockquote:text-center prose-blockquote:py-8 prose-blockquote:border-none
+    prose-em:text-[14px] prose-em:text-neutral-500 prose-em:not-italic prose-em:text-center prose-em:mb-12;
+}
+
+.share-btn {
+  @apply w-10 h-10 rounded-full border border-neutral-700 flex items-center justify-center hover:bg-neutral-900 hover:text-neutral-0 transition-colors text-neutral-700;
+}
+
+/* =========================================
+   Blog 文章專屬 Markdown 排版 (替換預設的 prose)
+========================================= */
+@layer components {
+  .prose-blog {
+    /* 基礎設定 */
+    @apply prose max-w-none;
+    
+    /* 段落 (p) */
+    @apply prose-p:text-[16px] prose-p:font-medium prose-p:text-neutral-700 prose-p:leading-relaxed prose-p:mb-8;
+    
+    /* 標題通用設定 */
+    @apply prose-headings:font-bold prose-headings:text-neutral-900;
+    
+    /* 標題 2 (h2) */
+    @apply prose-h2:text-[32px] prose-h2:mt-12 prose-h2:mb-6 prose-h2:leading-snug;
+    
+    /* 標題 3 (h3) */
+    @apply prose-h3:text-[24px] prose-h3:mt-10 prose-h3:mb-4;
+    
+    /* 粗體 (strong) - 在設計稿中被用作重點引言 */
+    @apply prose-strong:text-[16px] prose-strong:font-bold prose-strong:text-neutral-900 prose-strong:block prose-strong:mb-6;
+    
+    /* 圖片 (img) */
+    @apply prose-img:w-full prose-img:rounded-lg prose-img:mb-4 prose-img:mt-12;
+    
+    /* 斜體 (em) - 在設計稿中被用作圖說 */
+    @apply prose-em:text-[14px] prose-em:text-neutral-500 prose-em:not-italic prose-em:block prose-em:text-center prose-em:mb-12;
+    
+    /* 引言區塊 (blockquote) */
+    @apply prose-blockquote:border-none prose-blockquote:text-center prose-blockquote:py-8 prose-blockquote:my-8 prose-blockquote:border-y prose-blockquote:border-neutral-200 prose-blockquote:font-normal prose-blockquote:not-italic prose-blockquote:text-neutral-900 prose-blockquote:bg-transparent;
+  }
+}
