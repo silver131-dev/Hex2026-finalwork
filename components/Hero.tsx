@@ -19,14 +19,14 @@ export default function Hero() {
 
           {/* 🌸 裝飾：左上花花 */}
           <img
-            src="/img/index/index_decora_3.png"
+            src="/Hex2026-finalwork/img/index/index_decora_3.png"
             alt=""
             className="absolute -top-10 -left-10 w-[120px] animate-spin-slow opacity-80 z-0"
           />
 
           {/* 🌸 裝飾：左上虛線 */}
           <img
-            src="/img/index/index_decora_5.png"
+            src="/Hex2026-finalwork/img/index/index_decora_5.png"
             alt=""
             className="absolute -top-12 left-12 w-[120px] opacity-80 z-0"
           />
@@ -54,14 +54,14 @@ export default function Hero() {
 
           {/* 🌸 裝飾：左下花花 */}
           <img
-            src="/img/index/index_decora_3.png"
+            src="/Hex2026-finalwork/img/index/index_decora_3.png"
             alt=""
             className="absolute -bottom-16 left-24 w-[120px] animate-spin-slow opacity-80 z-0"
           />
 
           {/* 🌸 裝飾：左下虛線 */}
           <img
-            src="/img/index/index_decora_5.png"
+            src="/Hex2026-finalwork/img/index/index_decora_5.png"
             alt=""
             className="hidden md:block absolute -bottom-14 left-52 w-32"
           />
@@ -75,7 +75,7 @@ export default function Hero() {
   
          {/* 裝飾：左上橘色塊 */}
           <img
-           src="/img/index/index_decora_1.png"
+           src="/Hex2026-finalwork/img/index/index_decora_1.png"
            alt=""
            className="absolute -top-16 -left-16 w--[140px] md:w-56 animate-float z-20"
          />
@@ -89,14 +89,14 @@ export default function Hero() {
 
           {/* 裝飾：右側花花 */}
           <img
-           src="/img/index/index_decora_3.png"
+           src="/Hex2026-finalwork/img/index/index_decora_3.png"
            alt=""
            className="absolute top-1/2 -right-10 md:-right-16 animate-spin-slow opacity-80 -translate-y-1/2"
           />
 
          {/* 裝飾：右下橘色塊 */}
          <img
-         src="/img/index/index_decora_2.png"
+         src="/Hex2026-finalwork/img/index/index_decora_2.png"
          alt=""
          className="absolute -bottom-6 right-0 w-[140px] animate-float z-20"
          />

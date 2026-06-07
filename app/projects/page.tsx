@@ -56,11 +56,11 @@ export default function ProjectsPage() {
       desc: "從品牌識別設計到 RWD 響應式網站開發，打造療癒系植栽購物體驗",
       date: "Oct 16, 2025",
       tags: ["平面設計", "網頁設計"],
-      imgSrc: "/img/projects/project_1.png", 
+      imgSrc: "/Hex2026-finalwork/img/projects/project_1.png", 
       isReady: true,
       fullDesc: "我們將大自然的平靜感轉化為數位圖像，透過揉合大地色系與極簡排版，為「PLANTIQUE LIFE」建構出專屬的視覺語彙。在開發過程中，我們更時刻審視動態的極致追求，確保從品牌 Logo 到每一個組件的轉場，皆能散發柔和的純淨。",
       details: "設計原則：純粹極簡、日系風格、體驗視覺\n開發方式：Bootstrap, Javascript",
-      mockupImg: "/img/projects/project_modal_pic.png", 
+      mockupImg: "/Hex2026-finalwork/img/projects/project_modal_pic.png", 
     },
     {
       id: 2,
@@ -68,7 +68,7 @@ export default function ProjectsPage() {
       desc: "運用數據視覺化邏輯，將複雜的財務數據轉化為直覺的個人化操作介面",
       date: "Oct 16, 2025",
       tags: ["平面設計", "網頁設計", "前端切版"],
-      imgSrc: "/img/projects/project_2.png",
+      imgSrc: "/Hex2026-finalwork/img/projects/project_2.png",
       isReady: false,
     },
     {
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
       desc: "以優雅、輕盈的視覺語言，精準定位高質感甜點市場的品牌形象",
       date: "Oct 16, 2025",
       tags: ["前端切版", "後端開發"],
-      imgSrc: "/img/projects/project_3.png", 
+      imgSrc: "/Hex2026-finalwork/img/projects/project_3.png", 
       isReady: false,
     },
     {
@@ -86,7 +86,7 @@ export default function ProjectsPage() {
       desc: "串接第三方 API 並構建穩定的後端架構，確保安全的資產管理後台",
       date: "Oct 16, 2025",
       tags: ["網頁設計", "前端切版", "後端開發"],
-      imgSrc: "/img/projects/project_4.png",
+      imgSrc: "/Hex2026-finalwork/  img/projects/project_4.png",
       isReady: false,
     },
   ];
@@ -103,7 +103,7 @@ export default function ProjectsPage() {
       {/* ================= Hero 區塊 ================= */}
       <section 
         className="relative w-full h-[300px] md:h-[400px] bg-cover bg-center flex flex-col items-center justify-center text-neutral-0"
-        style={{ backgroundImage: "url('/img/projects/project_banner.png')" }}
+        style={{ backgroundImage: "url('/Hex2026-finalwork/img/projects/project_banner.png')" }}
       >
         <div className="absolute inset-0 bg-black/40 z-0"></div>
         <div className="relative z-10 text-center">

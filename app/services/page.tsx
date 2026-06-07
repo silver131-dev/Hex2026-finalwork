@@ -56,7 +56,7 @@ export default function ServicesPage() {
   const userCases = [
     {
       id: 1,
-      img: "/img/services/service_case_1.png", 
+      img: "/Hex2026-finalwork/img/services/service_case_1.png", 
       tags: "平面設計 ‧ 網頁設計",
       date: "Oct 16, 2022",
       title: "品牌視覺與電商整合，多肉植物品牌電商建置",
@@ -86,7 +86,7 @@ export default function ServicesPage() {
       {/* ================= Hero 區塊 (包含標題與浮動卡片) ================= */}
       <section 
         className="relative w-full py-16 md:py-24 bg-cover bg-center flex flex-col items-center justify-center text-neutral-0"
-        style={{ backgroundImage: "url('/img/services/service_banner.png')" }}
+        style={{ backgroundImage: "url('/Hex2026-finalwork/img/services/service_banner.png')" }}
       >
         <div className="absolute inset-0 bg-black/40 z-0"></div>
         
