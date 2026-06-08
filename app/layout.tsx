@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     // 🚨 記得把下方網址替換成你實際的 Github Pages 網址
     url: "https://silver131-dev.github.io/Hex2026-finalwork", 
     siteName: "Nelson Personal Portfolio",
-    images: [
+        images: [
       {
         // 分享縮圖
-        url: "/img/30day.png", 
+        url: "/Hex2026-finalwork/img/30day.png", 
         width: 1200,
         height: 630,
         alt: "Nelson 個人品牌網站縮圖",

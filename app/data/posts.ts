@@ -6,7 +6,7 @@ export const blogPosts = [
     date: "Oct 16, 2022",
     views: 110,
     shares: 2,
-    imgSrc: "/Hex2026-finalwork/img/blogs/blog_1.png", 
+    imgSrc: "/Hex2026-finalwork/img/blogs/blog-1.jpg", 
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const blogPosts = [
     date: "Oct 16, 2022",
     views: 110,
     shares: 2,
-    imgSrc: "/Hex2026-finalwork/img/blogs/blog_2.png",
+    imgSrc: "/Hex2026-finalwork/img/blogs/blog-2.jpg",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const blogPosts = [
     date: "Oct 16, 2022",
     views: 110,
     shares: 2,
-    imgSrc: "/Hex2026-finalwork/img/blogs/blog_3.png",
+    imgSrc: "/Hex2026-finalwork/img/blogs/blog-3.jpg",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const blogPosts = [
     date: "Oct 16, 2022",
     views: 110,
     shares: 2,
-    imgSrc: "/Hex2026-finalwork/img/blogs/blog_4.png",
+    imgSrc: "/Hex2026-finalwork/img/blogs/blog-4.jpg",
   },
   {
     id: 5,
@@ -42,6 +42,6 @@ export const blogPosts = [
     date: "Oct 16, 2022",
     views: 110,
     shares: 2,
-    imgSrc: "/Hex2026-finalwork/img/blogs/blog_5.png",
+    imgSrc: "/Hex2026-finalwork/img/blogs/blog-5.jpg",
   }
 ];

@@ -64,7 +64,7 @@ export default function ServicesPage() {
     },
     {
       id: 2,
-      img: "/img/services/service_case_2.png", 
+      img: "/Hex2026-finalwork/img/services/service_case_2.png", 
       tags: "平面設計 ‧ 網頁設計 ‧ 前端切版",
       date: "Oct 16, 2022",
       title: "數位產品 UI/UX 設計，個人化財務視覺化軟體",
@@ -109,17 +109,17 @@ export default function ServicesPage() {
                     isActive 
                       ? "bg-[#2A211D] text-neutral-0" 
                       : "bg-white text-[#2A211D] hover:bg-neutral-100" 
-                  }`}
-                >
-                  <span className="material-symbols-outlined text-[32px] md:text-[40px] mb-4">
+                  {
+                    id: 2,
+                    img: "/Hex2026-finalwork/img/services/service_case_2.png", 
                     {card.icon}
                   </span>
                   <p className="text-[12px] md:text-[14px] tracking-widest font-bold mb-1">{card.en}</p>
                   <h3 className="text-[18px] md:text-[20px] font-bold">{card.zh}</h3>
                 </div>
-              );
-            })}
-          </div>
+              {
+
+                const faqs = [
         </div>
       </section>
 

@@ -77,12 +77,12 @@ export default function Hero() {
           <img
            src="/Hex2026-finalwork/img/index/index_decora_1.png"
            alt=""
-           className="absolute -top-16 -left-16 w--[140px] md:w-56 animate-float z-20"
+           className="absolute -top-16 -left-16 w-[140px] md:w-56 animate-float z-20"
          />
 
           {/* 人物照片 */}
           <img
-           src="/img/index/index_person.png"
+           src="/Hex2026-finalwork/img/index/index_person.png"
            alt="Nelson"
            className="w-full h-auto object-cover max-w-[600px] shadow-[0_8px_24px_rgba(0,0,0,0.15)] relative z-10"
           />

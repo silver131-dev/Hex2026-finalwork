@@ -42,7 +42,7 @@ export default function BlogsPage() {
 
       <section 
         className="relative w-full h-[300px] md:h-[400px] bg-neutral-900 bg-cover bg-center flex flex-col items-center justify-center text-neutral-0"
-        style={{ backgroundImage: "url('/Hex2026-finalwork/img/blogs/blog_banner.png')" }}
+        style={{ backgroundImage: "url('/img/blogs/blog_banner.png')" }}
       >
         <div className="absolute inset-0 bg-black/40 z-0"></div> 
         <div className="relative z-10 text-center">

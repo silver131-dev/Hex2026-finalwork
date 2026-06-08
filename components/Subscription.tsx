@@ -3,7 +3,7 @@ export default function Subscription() {
     // 🌟 在這裡加上 style 載入幾何底圖
     <section 
       className="relative bg-primary-900 bg-cover bg-center overflow-hidden"
-      style={{ backgroundImage: "url('/img/subscription/subscription_bg.png')" }} 
+      style={{ backgroundImage: "url('/Hex2026-finalwork/img/subscription/subscription_bg.png')" }} 
     >
       
       {/* 黑色半透明遮罩：疊在底圖上方，讓底圖變暗 */}
@@ -14,7 +14,7 @@ export default function Subscription() {
         
         {/* 左側圖片 */}
         <img 
-          src="/img/subscription/subscription.png" 
+          src="/Hex2026-finalwork/img/subscription/subscription.png" 
           alt="訂閱 CTA 裝飾圖片" 
           className="flex-1 w-full h-64 md:h-auto object-cover md:max-w-[526px]" 
         />
