@@ -16,6 +16,7 @@ export default function ServicesPage() {
   };
 
   // ================= 區塊資料 =================
+  /*這個雖然不符合設計稿，但這個功能好像很有趣，先保留*/
   const serviceCards = [
     { id: "graphic", icon: "draw", en: "GRAPHIC", zh: "平面設計" },
     { id: "website", icon: "desktop_windows", en: "WEBSITE", zh: "網頁設計" },
@@ -109,19 +110,21 @@ export default function ServicesPage() {
                     isActive 
                       ? "bg-[#2A211D] text-neutral-0" 
                       : "bg-white text-[#2A211D] hover:bg-neutral-100" 
-                  {
-                    id: 2,
-                    img: "/Hex2026-finalwork/img/services/service_case_2.png", 
-                    {card.icon}
+                       }`}
+                       >
+
+                  <span className="material-symbols-outlined text-[32px] md:text-[40px] mb-4">
+                   {card.icon}
                   </span>
                   <p className="text-[12px] md:text-[14px] tracking-widest font-bold mb-1">{card.en}</p>
                   <h3 className="text-[18px] md:text-[20px] font-bold">{card.zh}</h3>
                 </div>
-              {
-
-                const faqs = [
+              );
+              })}
+          </div>
         </div>
-      </section>
+       </section>
+    
 
       {/* ================= 下半部深色背景：服務流程 Service Steps ================= */}
       <section className="bg-[#2A211D] relative w-full pt-16 md:pt-24 pb-12 md:pb-24 text-neutral-0">
