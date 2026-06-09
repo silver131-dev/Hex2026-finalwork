@@ -56,7 +56,7 @@ export default function BlogLayout({ children, meta, relatedPosts }: BlogLayoutP
           )}
         </header>
 
-       {/*  Body Section (替換回我們調好的 Tailwind Prose 樣式) 
+       {/*  Body Section (替換回調好的 Tailwind Prose 樣式) 
         <section className="prose max-w-none 
           prose-p:text-[16px] prose-p:font-medium prose-p:text-neutral-700 prose-p:leading-relaxed prose-p:mb-8
           prose-headings:font-bold prose-headings:text-neutral-900

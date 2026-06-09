@@ -12,6 +12,19 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleScrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault(); // 阻止任何預設跳轉行為
+    
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      // 呼叫瀏覽器原生 API 進行平滑滾動
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+    
+    // 如果是手機版，點擊後自動關閉選單
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="w-full bg-primary-50 py-4 px-6 md:px-12 flex justify-between items-center z-50 relative">
       
@@ -31,9 +44,13 @@ export default function Navbar() {
         <Link href="/blogs" className="hover:text-neutral-900 transition-colors uppercase">
           部落格
         </Link>
-       <Link href="#contact" className="hover:text-neutral-900 transition-colors uppercase">
-          與我聯絡
-        </Link>
+      {/* 🚨 1. 把 Link 換成 button，並綁定 handleScrollToContact */}
+        <button 
+          onClick={handleScrollToContact} 
+          className="hover:text-neutral-900 transition-colors uppercase cursor-pointer"
+        >
+          Contact
+        </button>
       </div>
 
       {/* ================= 手機版 漢堡按鈕 (Mobile Button) ================= */}
@@ -60,9 +77,13 @@ export default function Navbar() {
           <Link href="/blogs" onClick={() => setIsMenuOpen(false)} className="text-label-md font-bold text-neutral-900 uppercase">
             部落格
           </Link>
-         <Link href="#contact" className="hover:text-neutral-900 transition-colors uppercase">
-          與我聯絡
-        </Link>
+        {/* 🚨 2. 把 Link 換成 button，並綁定 handleScrollToContact */}
+          <button 
+            onClick={handleScrollToContact} 
+            className="text-label-md font-bold text-neutral-900 uppercase cursor-pointer"
+          >
+            Contact
+          </button>
         </div>
       )}
 

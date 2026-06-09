@@ -44,7 +44,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // ... (保留我們上次設定好的顏色)
+        // ... (保留設定好的顏色)
         primary: {
           50: 'var(--color-primary-50)',
           100: 'var(--color-primary-100)',

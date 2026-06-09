@@ -8,7 +8,7 @@ export default function Projects() {
       desc: "從品牌識別設計到 RWD 響應式網站開發，打造療癒系植栽購物體驗",
       date: "Oct 16, 2025",
       tags: ["平面設計", "網頁設計"],
-      imgSrc: "/img/projects/project_1.png", 
+      imgSrc:"/Hex2026-finalwork/img/projects/project_1.png"
     },
     {
       id: 2,
@@ -16,14 +16,14 @@ export default function Projects() {
       desc: "運用數據視覺化邏輯，將複雜的財務數據轉化為直覺的個人化操作介面",
       date: "Oct 16, 2025",
       tags: ["平面設計", "網頁設計", "前端切版"],
-      imgSrc: "/img/projects/project_2.png",
+      imgSrc: "/Hex2026-finalwork/img/projects/project_2.png",
     },{
       id: 3,
       title:"品牌識別與包裝設計，法式甜點品牌視覺重塑",
       desc:"以溫暖、輕盈的視覺語言，精準定位高質感甜點市場的品牌形象",
       date: "Oct 16, 2025",
       tags: ["前端切版・後端開發"],
-      imgSrc: "/img/projects/project_3.png",
+      imgSrc: "/Hex2026-finalwork/img/projects/project_3.png",
     }
 
   ];

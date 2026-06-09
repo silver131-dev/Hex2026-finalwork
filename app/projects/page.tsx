@@ -60,7 +60,7 @@ export default function ProjectsPage() {
       isReady: true,
       fullDesc: "我們將大自然的平靜感轉化為數位圖像，透過揉合大地色系與極簡排版，為「PLANTIQUE LIFE」建構出專屬的視覺語彙。在開發過程中，我們更時刻審視動態的極致追求，確保從品牌 Logo 到每一個組件的轉場，皆能散發柔和的純淨。",
       details: "設計原則：純粹極簡、日系風格、體驗視覺\n開發方式：Bootstrap, Javascript",
-      mockupImg: "/Hex2026-finalwork/img/projects/project_modal_pic.png", 
+      mockupImg: "/Hex2026-finalwork/img/projects/project_1_mockup.png", 
     },
     {
       id: 2,
@@ -86,7 +86,7 @@ export default function ProjectsPage() {
       desc: "串接第三方 API 並構建穩定的後端架構，確保安全的資產管理後台",
       date: "Oct 16, 2025",
       tags: ["網頁設計", "前端切版", "後端開發"],
-      imgSrc: "/Hex2026-finalwork/  img/projects/project_4.png",
+      imgSrc: "/Hex2026-finalwork/img/projects/project_4.png",
       isReady: false,
     },
   ];
