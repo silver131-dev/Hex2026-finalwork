@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     images: [
       {
         // 分享縮圖
-        url: "/img/30day.png", // 💡 注意：有了 metadataBase 後，這裡可以簡寫成相對路徑
+        url: "/img/30day.png", // 有 metadataBase 可以簡寫成相對路徑
         width: 1200,
         height: 630,
         alt: "Nelson 個人品牌網站縮圖",
@@ -35,16 +35,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-TW" className="scroll-smooth">
-      <body>
-        {children}
-      </body>
+      <head>
+        {/* Google Material Symbols 字體（ icon 必需） */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+          rel="stylesheet"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
