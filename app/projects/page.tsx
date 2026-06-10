@@ -181,12 +181,22 @@ export default function ProjectsPage() {
            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
          />
 
-         {/* 白色文字卡片 */}
-         <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-sm p-4 sm:p-6 flex flex-col items-center text-center rounded-lg shadow-lg">
-           <p className="text-[12px] text-neutral-500 font-normal mb-1">{project.date}</p>
-           <p className="text-[13px] text-neutral-800 font-bold tracking-wider mb-3">{project.tags.join(" ・ ")}</p>
-           <h3 className="text-[18px] md:text-[20px] font-bold text-neutral-900 leading-snug mb-3 whitespace-pre-wrap">{project.title}</h3>
-           <p className="text-[13px] text-neutral-600 leading-relaxed mb-5 line-clamp-2">{project.desc}</p>
+         {/* 左側浮動白框 (垂直置中) */}
+              <div className="absolute top-1/2 -translate-y-1/2 left-4 md:left-12 w-[calc(100%-32px)] md:w-[420px] bg-white/95 backdrop-blur-sm p-8 md:p-10 flex flex-col items-center text-center shadow-2xl">
+                
+                <p className="text-[12px] text-neutral-500 font-bold mb-2">
+                  {project.date}
+                </p>
+                <p className="text-[13px] text-neutral-900 font-bold tracking-widest mb-6">
+                  {project.tags.join(" ‧ ")}
+                </p>
+                <h3 className="text-[20px] md:text-[24px] font-bold text-neutral-900 leading-snug mb-4">
+                  {project.title}
+                </h3>
+                <p className="text-[14px] text-neutral-600 leading-relaxed mb-8">
+                  {project.desc}
+                </p>
+
 
            <button
              className={`px-8 py-2 rounded-full text-[13px] font-medium tracking-widest transition-colors ${
