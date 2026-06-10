@@ -8,11 +8,15 @@ import BlogLayout from "@/components/BlogLayout"; // 🚨 引入剛做好的 Lay
 import { blogPosts } from "../../../data/posts";
 
 export async function generateStaticParams() {
-  return [
-    { id: '1' },
-    { id: '2' },
-    { id: '3' }
+  const posts = [
+    { id: "1" },
+    { id: "2" },
+    { id: "3" },
+    { id: "4" },
   ];
+  return posts.map((post) => ({
+    id: post.id,
+  }));
 }
 
 type Props = {
