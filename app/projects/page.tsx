@@ -155,48 +155,49 @@ export default function ProjectsPage() {
       </section>
 
          {/* ================= 專案列表 ================= */}
-      <section className="w-full max-w-[1076px] mx-auto px-4 pb-12 md:pb-24 flex flex-col gap-8 md:gap-16">
+      <section className="  w-full max-w-[1076px] mx-auto px-4 pb-12 md:pb-24  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16">
+
         {filteredProjects.map((project) => (
           <div
-  key={project.id}
-  className="relative w-full sm:max-w-[351px] aspect-[351/580] mx-auto bg-white rounded-lg overflow-hidden shadow-sm border border-neutral-100 group cursor-pointer"
-  onClick={() => {
-    // ✅ 根據狀態切換不同 mockup 圖片
-    const mockupPath = project.isReady
-      ? "/Hex2026-finalwork/img/projects/project_modal_pic.png"
-      : "/Hex2026-finalwork/img/projects/project_2_mockup.png";
+         key={project.id}
+         className="relative w-full sm:max-w-[351px] aspect-[351/580] mx-auto bg-white rounded-lg overflow-hidden shadow-sm border border-neutral-100 group cursor-pointer"
+          onClick={() => {
+           // ✅ 根據狀態切換不同 mockup 圖片
+           const mockupPath = project.isReady
+              ? "/Hex2026-finalwork/img/projects/project_modal_pic.png"
+             : "/Hex2026-finalwork/img/projects/project_2_mockup.png";
 
-    setSelectedProject({
-      ...project,
-      mockupImg: mockupPath,
-    });
-  }}
->
-  <img
-    src={project.imgSrc}
-    alt={project.title}
-    loading="lazy"
-    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-  />
+           setSelectedProject({
+             ...project,
+              mockupImg: mockupPath,
+            });
+            }}
+        >
+          <img
+           src={project.imgSrc}
+           alt={project.title}
+           loading="lazy"
+           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+         />
 
-  {/* 白色文字卡片 */}
-  <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-sm p-4 sm:p-6 flex flex-col items-center text-center rounded-lg shadow-lg">
-    <p className="text-[12px] text-neutral-500 font-normal mb-1">{project.date}</p>
-    <p className="text-[13px] text-neutral-800 font-bold tracking-wider mb-3">{project.tags.join(" ・ ")}</p>
-    <h3 className="text-[18px] md:text-[20px] font-bold text-neutral-900 leading-snug mb-3 whitespace-pre-wrap">{project.title}</h3>
-    <p className="text-[13px] text-neutral-600 leading-relaxed mb-5 line-clamp-2">{project.desc}</p>
+         {/* 白色文字卡片 */}
+         <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-sm p-4 sm:p-6 flex flex-col items-center text-center rounded-lg shadow-lg">
+           <p className="text-[12px] text-neutral-500 font-normal mb-1">{project.date}</p>
+           <p className="text-[13px] text-neutral-800 font-bold tracking-wider mb-3">{project.tags.join(" ・ ")}</p>
+           <h3 className="text-[18px] md:text-[20px] font-bold text-neutral-900 leading-snug mb-3 whitespace-pre-wrap">{project.title}</h3>
+           <p className="text-[13px] text-neutral-600 leading-relaxed mb-5 line-clamp-2">{project.desc}</p>
 
-    <button
-      className={`px-8 py-2 rounded-full text-[13px] font-medium tracking-widest transition-colors ${
-        project.isReady
-          ? "bg-[#2A211D] text-white hover:bg-[#3d302a]"
-          : "bg-neutral-200 text-neutral-400 cursor-not-allowed"
-      }`}
+           <button
+             className={`px-8 py-2 rounded-full text-[13px] font-medium tracking-widest transition-colors ${
+                project.isReady
+                ? "bg-[#2A211D] text-white hover:bg-[#3d302a]"
+                : "bg-neutral-200 text-neutral-400 cursor-not-allowed"
+       }`}
     >
-      {project.isReady ? "前往專案" : "專案建置中"}
-    </button>
-  </div>
-</div>
+              {project.isReady ? "前往專案" : "專案建置中"}
+            </button>
+         </div>
+        </div>
         ))}
       </section>
 
