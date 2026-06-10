@@ -154,36 +154,56 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* ================= 專案列表 ================= */}
-      <section className="w-full max-w-[1076px] mx-auto px-4 pb-12 md:pb-24 flex flex-col gap-8 md:gap-16">
-        {filteredProjects.map((project) => (
-          <div key={project.id} className="relative w-full h-[360px] md:h-[480px] group overflow-hidden bg-neutral-100">
-            <img src={project.imgSrc} alt={project.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div className="absolute top-1/2 -translate-y-1/2 left-4 md:left-12 w-[calc(100%-32px)] md:w-[420px] bg-white/95 backdrop-blur-sm p-8 md:p-10 flex flex-col items-center text-center shadow-2xl">
-              <p className="text-[12px] text-neutral-500 font-bold mb-2">{project.date}</p>
-              <p className="text-[13px] text-neutral-900 font-bold tracking-widest mb-6">{project.tags.join("・")}</p>
-              <h3 className="text-[20px] md:text-[24px] font-bold text-neutral-900 leading-snug mb-4">{project.title}</h3>
-              <p className="text-[14px] text-neutral-600 leading-relaxed mb-8">{project.desc}</p>
-              
-              {project.isReady ? (
-                <button 
-                  onClick={() => setSelectedProject(project)}
-                  className="bg-[#2A211D] text-white px-8 py-2.5 rounded-full text-[13px] font-bold tracking-widest hover:bg-primary-500 transition-colors"
-                >
-                  前往專案
-                </button>
-              ) : (
-                <button 
-                  disabled
-                  className="bg-neutral-200 text-neutral-400 px-8 py-2.5 rounded-full text-[13px] font-bold tracking-widest cursor-not-allowed"
-                >
-                  專案建置中
-                </button>
-              )}
+        {/* ================= 專案列表 ================= */}
+        <section className="w-full max-w-[1076px] mx-auto px-4 pb-12 md:pb-24 flex flex-col gap-8 md:gap-16">
+         {filteredProjects.map((project) => (
+           <div 
+             key={project.id} 
+             className="w-full flex flex-col bg-white border border-neutral-100 shadow-sm p-4 gap-3 overflow-hidden group"
+           >
+             {/* 👉 圖片區塊：固定比例 + Crop（完全符合 Figma） */}
+             <div className="relative w-full aspect-[351/580] rounded-lg overflow-hidden">
+               <img 
+                 src={project.imgSrc} 
+                 alt={project.title} 
+                 loading="lazy" /* 加入懶加載優化效能 */
+                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+               />
+             </div>
+
+              {/* 👉 文字內容 */}
+             <div className="w-full flex flex-col items-center text-center py-2 px-4">
+               <p className="text-[12px] text-neutral-500 font-bold mb-1">{project.date}</p>
+               <p className="text-[13px] text-neutral-900 font-bold tracking-widest mb-3">
+                  {project.tags.join("・")}
+               </p>
+               <h3 className="text-[18px] md:text-[24px] font-bold text-neutral-900 leading-snug mb-2 line-clamp-1">
+                 {project.title}
+               </h3>
+                <p className="text-[14px] text-neutral-600 leading-relaxed mb-4 line-clamp-2">
+                  {project.desc}
+               </p>
+
+                {/* 👉 按鈕區塊 */}
+               {project.isReady ? (
+                  <button 
+                    onClick={() => setSelectedProject(project)}
+                   className="bg-[#2A211D] text-white px-8 py-2 rounded-full text-[13px] font-bold tracking-widest hover:bg-[#3d302a] transition-colors"
+                 >
+                   前往專案
+                 </button>
+               ) : (
+                 <button 
+                   disabled
+                   className="bg-neutral-200 text-neutral-400 px-8 py-2 rounded-full text-[13px] font-bold tracking-widest cursor-not-allowed"
+                 >
+                    專案建置中
+                 </button>
+               )}
+             </div>
             </div>
-          </div>
-        ))}
-      </section>
+         ))}
+         </section>
 
       <Contact />
 

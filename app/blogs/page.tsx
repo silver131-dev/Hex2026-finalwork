@@ -6,7 +6,7 @@ import Subscription from "@/components/Subscription";
 import Contact from "@/components/Contact";
 import Link from "next/link";
 
-// 🚨 這是列表頁，只要往上跳兩層
+// 🚨 列表頁，只要往上跳兩層
 import { blogPosts } from "../../data/posts"; 
 
 export default function BlogsPage() {
@@ -17,7 +17,7 @@ export default function BlogsPage() {
     ? blogPosts 
     : blogPosts.filter(post => post.tags.includes(selectedCategory));
 
-    // ==========================================
+  // ==========================================
   // 🚨 2. 新增這段：用來控制左右滑動的邏輯
   // ==========================================
   const scrollRef = useRef<HTMLUListElement>(null);
@@ -42,7 +42,7 @@ export default function BlogsPage() {
 
       <section 
         className="relative w-full h-[300px] md:h-[400px] bg-neutral-900 bg-cover bg-center flex flex-col items-center justify-center text-neutral-0"
-        style={{ backgroundImage: "url('/img/blogs/blog_banner.png')" }}
+        style={{ backgroundImage: "url('/Hex2026-finalwork/img/blogs/blog_banner.png')" }}
       >
         <div className="absolute inset-0 bg-black/40 z-0"></div> 
         <div className="relative z-10 text-center">
