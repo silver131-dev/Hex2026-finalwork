@@ -49,7 +49,7 @@ export default function Navbar() {
           onClick={handleScrollToContact} 
           className="hover:text-neutral-900 transition-colors uppercase cursor-pointer"
         >
-          Contact
+          與我聯絡
         </button>
       </div>
 
