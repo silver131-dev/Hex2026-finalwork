@@ -155,12 +155,12 @@ export default function ProjectsPage() {
       </section>
 
          {/* ================= 專案列表 ================= */}
-       <section className="w-full max-w-[1076px] mx-auto px-4 pb-12 md:pb-24 flex flex-col gap-8 md:gap-16">
+       <section className="w-full bg-primary-50 py-16 md:py-24">
 
         {filteredProjects.map((project) => (
           <div
          key={project.id}
-         className="relative w-full h-[360px] md:h-[480px] group overflow-hidden bg-neutral-100"
+         className="rmax-w-[1076px] mx-auto px-4 relative w-full h-[360px] md:h-[480px] group overflow-hidden bg-neutral-100 shadow-sm mb-12 cursor-pointer"
 
           onClick={() => {
            // ✅ 根據狀態切換不同 mockup 圖片
