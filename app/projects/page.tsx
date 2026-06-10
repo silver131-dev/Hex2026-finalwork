@@ -155,65 +155,54 @@ export default function ProjectsPage() {
       </section>
 
         {/* ================= 專案列表 ================= */}
-        <section className="w-full max-w-[1076px] mx-auto px-4 pb-12 md:pb-24 flex flex-col gap-8 md:gap-16">
+        <section className="
+         w-full max-w-[1076px] mx-auto px-4 pb-12 md:pb-24 
+         grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16
+        ">
          {filteredProjects.map((project) => (
-         <div 
-           key={project.id} 
-           className="relative w-full max-w-[351px] aspect-[351/580] mx-auto bg-white rounded-lg overflow-hidden shadow-sm border border-neutral-100 group"
-         >
-           {/* 👉 1. 背景圖片：滿版 (佔滿整個 351x580 的卡片) */}
-           <img 
-            src={project.imgSrc} 
-              alt={project.title} 
-              loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-           />
+            <div 
+              key={project.id} 
+              className="
+                relative w-full sm:max-w-[351px] aspect-[351/580] mx-auto 
+                bg-white rounded-lg overflow-hidden shadow-sm border border-neutral-100 group
+              "
+            >
+              <img 
+                src={project.imgSrc} 
+                alt={project.title} 
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              />
 
-            {/* 👉 2. 前景白色文字卡片：絕對定位在下方 */}
-            <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-6 flex flex-col items-center text-center rounded-lg shadow-lg">
+             <div className="
+               absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 
+               bg-white/95 backdrop-blur-sm p-4 sm:p-6 flex flex-col items-center text-center rounded-lg shadow-lg
+             ">
+                <p className="text-[12px] text-neutral-500 font-normal mb-1">{project.date}</p>
+                <p className="text-[13px] text-neutral-800 font-bold tracking-wider mb-3">{project.tags.join(" ・ ")}</p>
+                <h3 className="text-[18px] md:text-[20px] font-bold text-neutral-900 leading-snug mb-3 whitespace-pre-wrap">{project.title}</h3>
+                <p className="text-[13px] text-neutral-600 leading-relaxed mb-5 line-clamp-2">{project.desc}</p>
 
-              {/* 日期 */}
-              <p className="text-[12px] text-neutral-500 font-normal mb-1">
-                {project.date}
-              </p>
-      
-              {/* 分類標籤 */}
-              <p className="text-[13px] text-neutral-800 font-bold tracking-wider mb-3">
-               {project.tags.join(" ・ ")}
-             </p>
-      
-              {/* 標題 (移除 line-clamp-1，讓其自然換行) */}
-              <h3 className="text-[18px] md:text-[20px] font-bold text-neutral-900 leading-snug mb-3 whitespace-pre-wrap">
-                {project.title}
-             </h3>
-      
-             {/* 描述 */}
-             <p className="text-[13px] text-neutral-600 leading-relaxed mb-5 line-clamp-2">
-               {project.desc}
-             </p>
-
-             {/* 👉 按鈕 */}
-             {project.isReady ? (
-               <button 
-                 onClick={() => setSelectedProject(project)}
-                 className="bg-[#2A211D] text-white px-8 py-2 rounded-full text-[13px] font-medium tracking-widest hover:bg-[#3d302a] transition-colors"
-               >
-                 前往專案
-               </button>
-             ) : (
-               <button 
-                 disabled
-                 className="bg-neutral-200 text-neutral-400 px-8 py-2 rounded-full text-[13px] font-medium tracking-widest cursor-not-allowed"
-               >
-                 專案建置中
-               </button>
-             )}
+                {project.isReady ? (
+                  <button 
+                    onClick={() => setSelectedProject(project)}
+                    className="bg-[#2A211D] text-white px-8 py-2 rounded-full text-[13px] font-medium tracking-widest hover:bg-[#3d302a] transition-colors"
+                  >
+                    前往專案
+                  </button>
+               ) : (
+                 <button 
+                   disabled
+                   className="bg-neutral-200 text-neutral-400 px-8 py-2 rounded-full text-[13px] font-medium tracking-widest cursor-not-allowed"
+                 >
+                   專案建置中
+                 </button>
+               )}
+             </div>
            </div>
-         </div>
-        ))}
-        </section>
+         ))}
 
-      <Contact />
+        </section>
 
       {/* ================= 燈箱 Modal 區塊 ================= */}
       {selectedProject && (
